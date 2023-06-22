@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <a href="/speakers/">View All</a> | <a href="/speakers/create/">Form</a> | <a href="">Delete</a>
+    <hr>
+    <form action="" method="post">
+        {%if person%}
+       <label for="">Names</label>
+       <input type="text" name="names" value="{{person.names}}" id=""><br>
+       <label for="">Bio</label>
+       <input type="text" name="bio" value="{{person.Bios}}" id=""><br>
+       <label for="">Contact Infromation</label>
+       <input type="text" name="phonenumber" value="{{person.Email}}" id=""><br>
+       <label for="">Phone</label>
+       <input type="text" name="phonenumber" value="{{person.Phone}}" id=""><br>
+       <button type="button">Send</button>
+       {%else%}
+       <p>Person Not found</p>
+     {% endif %}
+       
+        
+    </form>  
+</body>
+</html>

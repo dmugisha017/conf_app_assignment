@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        .button2 {background-color: #008CBA;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */ 
+        .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+        .button5 {background-color: #555555;} /* Black */
+        </style>
+</head>
+<body>
+    
+    <a href="" class="button">View</a> <a href="/speakers/create/" class="button">Form</a> 
+    <hr>
+    <h1>List of Speakers</h1>
+    <table border="1">
+        <tr><th>Id</th>
+            <th>Names</th>
+            <th>Bios</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    {% for person_key, person_value in data.items %}
+ <tr>
+   <td>{{person_value.id}}</td>
+    <td>{{person_value.names}}</td>
+    <td>{{person_value.Bios}}</td>
+    <td>{{person_value.Email}}</td>
+    <td>{{person_value.Phone}}</td>
+ </tr>
+    {%endfor%}
+    </table>
+</body>
+</html>
